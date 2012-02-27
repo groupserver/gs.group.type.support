@@ -2,9 +2,28 @@
 <configure xmlns="http://namespaces.zope.org/zope"
   xmlns:browser="http://namespaces.zope.org/browser"
   i18n_domain="groupserver">
-  
+
   <interface interface=".interfaces.IGSSupportGroup"
     type="zope.app.content.interfaces.IContentType" />
+
+  <adapter
+    factory=".canpost.CanPostToSupport"
+    for="Products.CustomUserFolder.interfaces.IGSUserInfo 
+      .interfaces.IGSSupportGroup"
+    provides="gs.group.member.canpost.interfaces.IGSPostingUser" />
+  <!--The one rule for posting to a support group -->
+  <adapter
+    factory=".canpostrules.BlockedFromPosting"
+    for="Products.CustomUserFolder.interfaces.IGSUserInfo 
+      .interfaces.IGSSupportGroup"
+    provides="gs.group.member.canpost.interfaces.IGSCanPostRule" />
+    
+  <browser:page
+    for=".interfaces.IGSSupportGroup"
+    name="canpostrules.html"
+    class=".foo.PostingRules"
+    template="browser/templates/foo.pt"
+    permission="zope2.View"/>
 
 </configure>
 
