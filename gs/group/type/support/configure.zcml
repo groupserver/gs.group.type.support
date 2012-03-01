@@ -7,11 +7,5 @@
   <interface interface=".interfaces.IGSSupportGroup"
     type="zope.app.content.interfaces.IContentType" />
 
-  <adapter
-    for="Products.CustomUserFolder.interfaces.IGSUserInfo 
-      .interfaces.IGSSupportGroup"
-    provides="gs.group.member.canpost.interfaces.IGSCanPostRule" 
-    factory="gs.group.member.canpost.rules.BlockedFromPosting"  />
-
 </configure>
 
