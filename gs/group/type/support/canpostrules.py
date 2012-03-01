@@ -1,11 +1,6 @@
 # coding=utf-8
 from zope.cachedescriptors.property import Lazy
-from zope.component import adapts
-from zope.interface import implements, providedBy
 from Products.GSGroup.interfaces import IGSGroupInfo
-from Products.CustomUserFolder.interfaces import IGSUserInfo
-from gs.group.member.canpost.interfaces import IGSCanPostRule
-from interfaces import IGSSupportGroup
 
 class BaseRule(object):
     def __init__(self, userInfo, group):
@@ -65,12 +60,4 @@ class BlockedFromPosting(BaseRule):
     def status(self):
         self.check()
         return self.__status
-        
-#class EmailBlacklist(object):
-    #  --=mpj17=-- Implementing this may not be possible
-#    implements(IGSCanPostRule)
-#    canPost = False
-#    statusNum = -1
-#    status = u'Not Implemented'
-#    weight = 20
 
