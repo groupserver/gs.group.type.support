@@ -32,11 +32,10 @@ setup(name='gs.group.type.support',
     zip_safe=False,
     install_requires=[
         'setuptools',
+        'zope.app.content',
         'gs.group.base',
-        # -*- Extra requirements: -*-
     ],
     entry_points="""
     # -*- Entry points: -*-
     """,
 )
-
