@@ -53,9 +53,9 @@ setup(name=name,
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-        'setuptools',
-        'zope.app.content',
-        'gs.group.base',
+          'setuptools',
+          'zope.app.content',
+          'gs.group.base',
       ],
       entry_points="""
           # -*- Entry points: -*-
