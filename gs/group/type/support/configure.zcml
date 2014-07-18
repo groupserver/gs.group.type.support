@@ -13,4 +13,9 @@
     for="gs.group.base.interfaces.IGSGroupMarker"
     provides="gs.group.type.set.interfaces.ISetType"
     factory=".set.SetSupportGroup"  />
+  <!--Note that it is an unnamed adaptor-->
+  <adapter
+    for=".interfaces.IGSSupportGroup"
+    provides="gs.group.type.set.interfaces.IUnsetType"
+    factory=".set.UnsetSupportGroup"  />
 </configure>
