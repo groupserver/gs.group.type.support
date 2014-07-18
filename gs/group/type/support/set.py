@@ -23,6 +23,11 @@ class SetSupportGroup(SetABC):
     show = True
 
     def set(self):
+        self.set_marker()
+        self.set_list_property('unclosed', 1, 'boolean')
+        self.set_list_property('replyto', 'sender')
+
+    def set_marker(self):
         '''Add the marker-interface to make the group into a support
         group.'''
         iFaces = ['gs.group.type.support.interfaces.IGSSupportGroup']
@@ -34,5 +39,10 @@ class UnsetSupportGroup(UnsetABC):
     setTypeId = 'gs-group-type-support-set'
 
     def unset(self):
+        self.unset_marker()
+        self.del_list_property('unclosed')
+        self.del_list_property('replyto')
+
+    def unset_marker(self):
         iFaces = ['gs.group.type.support.interfaces.IGSSupportGroup']
         self.del_marker(self.group, iFaces)
