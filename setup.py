@@ -55,7 +55,13 @@ setup(name=name,
       install_requires=[
           'setuptools',
           'zope.app.content',
+          'zope.cachedescriptors',
+          'zope.component',
+          'zope.interface',
+          'Zope2',  # Actually does not need zope.tal, nor zope.tales
           'gs.group.base',
+          'gs.group.member.canpost',
+          'gs.group.type.set',
       ],
       entry_points="""
           # -*- Entry points: -*-
