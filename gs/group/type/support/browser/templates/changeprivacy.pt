@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="context/@@groupserver_layout/page">
+  <head>
+    <title metal:fill-slot="title">
+      Change privacy:
+      <span tal:replace="string:${view/groupInfo/name}: ${view/siteInfo/get_name}">:
+      Change basic group privacy
+      </span>
+    </title>
+    <tal:block metal:fill-slot="metadata">
+      <link rel="up" href="#"
+            tal:attributes="href view/groupInfo/relativeURL;
+                            title view/groupInfo/name"/>
+    </tal:block>
+  </head>
+  <body>
+    <ul metal:fill-slot="breadcrumb">
+      <li class="site">
+        <a tal:attributes="title string:${view/siteInfo/name} Homepage"
+           href="/" title="Home" class="icon-alone">
+          <span aria-hidden="true" data-icon="&#x2302;"></span>
+          <span class="screen-reader-text"
+                tal:content="string:${view/siteInfo/name} Homepage">Home</span></a>
+      </li>
+      <li>
+        <a class="group"
+           tal:attributes="href string:${view/groupInfo/relativeURL}/">
+          <strong
+            tal:content="view/groupInfo/name">This group</strong></a>
+      </li>
+      <li>Change privacy</li>
+    </ul>
+    <div metal:fill-slot="body">
+      <h1>Change privacy</h1>
+      <p>
+        The privacy for
+        <span class="group"
+              tal:content="view/groupInfo/name">this group</span>
+        cannot be changed because it is a
+        <em class="wordasword">support group:</em> anyone can post
+       to the group, but only the members can view it.
+      </p>
+    </div>
+  </body>
+</html>

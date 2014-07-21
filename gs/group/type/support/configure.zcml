@@ -4,8 +4,9 @@
            i18n_domain="groupserver">
 
   <!--The marker interface for the support group-->
-  <interface interface=".interfaces.IGSSupportGroup"
-             type="zope.app.content.interfaces.IContentType" />
+  <interface
+    interface=".interfaces.IGSSupportGroup"
+    type="zope.app.content.interfaces.IContentType" />
 
   <!--The Set Group Type adaptor-->
   <adapter
@@ -18,4 +19,12 @@
     for=".interfaces.IGSSupportGroup"
     provides="gs.group.type.set.interfaces.IUnsetType"
     factory=".set.UnsetSupportGroup"  />
+
+  <!--The privacy for a Support group is fixed-->
+  <browser:page
+    name="admin_change_basic_privacy.html"
+    for=".interfaces.IGSSupportGroup"
+    class="gs.group.base.GroupPage"
+    template="browser/templates/changeprivacy.pt"
+    permission="zope2.ManageProperties" />
 </configure>
