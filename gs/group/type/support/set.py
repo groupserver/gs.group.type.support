@@ -13,17 +13,21 @@
 #
 ############################################################################
 from __future__ import absolute_import, unicode_literals
+from zope.component import createObject
 from gs.group.type.set import (SetABC, UnsetABC)
+from gs.group.privacy.interfaces import IGSChangePrivacy
 
 
 class SetSupportGroup(SetABC):
     'Set a group folder to be a support group'
-    name = 'Support group'
+    name = 'Support group: non-members can post, but only members can '\
+           'see the group'
     weight = 30
     show = True
 
     def set(self):
         self.set_marker()
+        self.set_secret()
         self.set_list_property('unclosed', 1, 'boolean')
         self.set_list_property('replyto', 'sender')
 
@@ -32,6 +36,12 @@ class SetSupportGroup(SetABC):
         group.'''
         iFaces = ['gs.group.type.support.interfaces.IGSSupportGroup']
         self.add_marker(self.group, iFaces)
+
+    def set_secret(self):
+        'Support groups should always be private'
+        groupInfo = createObject('groupserver.GroupInfo', self.group)
+        changer = IGSChangePrivacy(groupInfo)
+        changer.set_group_secret()
 
 
 class UnsetSupportGroup(UnsetABC):
