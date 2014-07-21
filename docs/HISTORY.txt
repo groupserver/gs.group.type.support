@@ -1,14 +1,21 @@
 Changelog
 =========
 
-1.0 - Unreleased
------------------
+2.1.0 (2013-07-21)
+------------------
 
-* Split gs.profile.signup off from Products.GSProfile.
-* Reordered the pages involved in sign up:
-  1. Sign Up
-  2. Set Password
-  3. Change Profile
-  4. Verify Email
-* The Set Password page now takes in the password /en clear/.
+* Added the classes for changing the group-type
+* Overwrote the *Change privacy* page, locking the privacy to *secret*.
+* Many PEP-8 changes.
 
+2.0.0 (2012-09-29)
+------------------
+
+* Cleanup, including the product dependencies
+* Updating the README
+* Updating the version number
+
+1.0.0 (2012-03-01)
+------------------
+
+* Created the support-group type from ``gs.group.member.canpost``
