@@ -16,12 +16,14 @@ from __future__ import absolute_import, unicode_literals
 from zope.component import createObject
 from gs.group.type.set import (SetABC, UnsetABC)
 from gs.group.privacy.interfaces import IGSChangePrivacy
+from . import GSMessageFactory as _
 
 
 class SetSupportGroup(SetABC):
     'Set a group folder to be a support group'
-    name = 'Support group: non-members can post, but only members can '\
-           'see the group'
+    name = _('set-name',
+             'Support group: non-members can post, but only members can '
+             'see the group')
     weight = 30
     show = True
 
@@ -45,7 +47,7 @@ class SetSupportGroup(SetABC):
 
 
 class UnsetSupportGroup(UnsetABC):
-    name = 'Support group'
+    name = _('Support group')
     setTypeId = 'gs-group-type-support-set'
 
     def unset(self):

@@ -1,13 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="gs.group.type.support"
       metal:use-macro="context/@@groupserver_layout/page">
   <head>
     <title metal:fill-slot="title">
-      Change privacy:
-      <span tal:replace="string:${view/groupInfo/name}: ${view/siteInfo/get_name}">:
-      Change basic group privacy
-      </span>
+      <tal:block i18n:translate="change-privacy">Change privacy</tal:block>:
+      <tal:block content="string:${view/groupInfo/name}: ${view/siteInfo/get_name}">group: site</tal:block>
     </title>
     <tal:block metal:fill-slot="metadata">
       <link rel="up" href="#"
@@ -30,11 +30,11 @@
           <strong
             tal:content="view/groupInfo/name">This group</strong></a>
       </li>
-      <li>Change privacy</li>
+      <li i18n:translate="change-privacy">Change privacy</li>
     </ul>
     <div metal:fill-slot="body">
-      <h1>Change privacy</h1>
-      <p>
+      <h1 i18n:translate="change-privacy">Change privacy</h1>
+      <p i18n:translate="change-privacy-body">
         The privacy for
         <span class="group"
               tal:content="view/groupInfo/name">this group</span>

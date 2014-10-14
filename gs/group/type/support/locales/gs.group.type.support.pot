@@ -1,0 +1,38 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-10-14 23:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: gs.group.type.support\n"
+
+#: ./set.py:50
+msgid "Support group"
+msgstr ""
+
+#. Default: "Change privacy"
+#: ./browser/templates/changeprivacy.pt:9
+msgid "change-privacy"
+msgstr ""
+
+#. Default: "The privacy for <span class=\"group\">${DYNAMIC_CONTENT}</span> cannot be changed because it is a <em class=\"wordasword\">support group:</em> anyone can post to the group, but only the members can view it."
+#: ./browser/templates/changeprivacy.pt:39
+msgid "change-privacy-body"
+msgstr ""
+
+#. Default: "Support group: non-members can post, but only members can see the group"
+#: ./set.py:24
+msgid "set-name"
+msgstr ""
+
