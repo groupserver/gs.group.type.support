@@ -7,7 +7,7 @@ Support for support groups
 
 :Author: `Michael JasonSmith`_
 :Contact: Michael JasonSmith <mpj17@onlinegroups.net>
-:Date: 2014-07-21
+:Date: 2014-10-14
 :Organization: `GroupServer.org`_
 :Copyright: This document is licensed under a
   `Creative Commons Attribution-Share Alike 4.0 International License`_
@@ -76,14 +76,15 @@ secret.
 Resources
 =========
 
-- Code repository: https://source.iopen.net/groupserver/gs.group.type.support
+- Code repository: https://github.com/groupserver/gs.group.type.support
 - Questions and comments to http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
 
 .. [#canpost] See ``gs.group.member.canpost`` for more information:
-              <https://source.iopen.net/groupserver/gs.group.member.canpost/>
+              <https://github.com/groupserver/gs.group.member.canpost/>
+
 .. [#set] See ``gs.group.type.set`` for more information:
-              <https://source.iopen.net/groupserver/gs.group.type.set/>
+          <https://github.com/groupserver/gs.group.type.set/>
    
 .. _GroupServer: http://groupserver.org/
 .. _GroupServer.org: http://groupserver.org/

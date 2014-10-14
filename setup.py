@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ############################################################################
 #
-# Copyright © 2013, 2014 OnlineGroups.net and Contributors.
+# Copyright © 2012, 2014 OnlineGroups.net and Contributors.
 # All Rights Reserved.
 #
 # This software is subject to the provisions of the Zope Public License,
@@ -26,7 +26,7 @@ with codecs.open(os.path.join("docs", "HISTORY.rst"),
     long_description += '\n' + f.read()
 
 name = 'gs.group.type.support'
-url = 'https://source.iopen.net/groupserver/{0}/'.format(name)
+url = 'https://github.com/groupserver/{0}/'.format(name)
 
 setup(name=name,
       version=version,
