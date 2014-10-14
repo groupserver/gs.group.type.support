@@ -45,7 +45,7 @@ class SetSupportGroup(SetABC):
 
 
 class UnsetSupportGroup(UnsetABC):
-    name = 'Suppport group'
+    name = 'Support group'
     setTypeId = 'gs-group-type-support-set'
 
     def unset(self):
