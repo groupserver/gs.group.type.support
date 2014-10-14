@@ -1,11 +1,12 @@
 Changelog
 =========
 
-2.1.1 (2014-10-14)
+2.2.0 (2014-10-14)
 ------------------
 
 * Pointing the product metadata at GitHub, and naming the
   reStructuredText files as such
+* Added i18n support
 * Corrected a spelling mistake
 
 2.1.0 (2014-07-21)
