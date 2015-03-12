@@ -76,8 +76,12 @@ secret.
 Resources
 =========
 
-- Code repository: https://github.com/groupserver/gs.group.type.support
-- Questions and comments to http://groupserver.org/groups/development
+- Code repository:
+  https://github.com/groupserver/gs.group.type.support
+- Translations:
+  https://www.transifex.com/projects/p/gs-group-type-support/
+- Questions and comments to
+  http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
 
 .. [#canpost] See ``gs.group.member.canpost`` for more information:
