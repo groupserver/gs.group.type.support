@@ -36,7 +36,7 @@
       <h1 i18n:translate="change-privacy">Change privacy</h1>
       <p i18n:translate="change-privacy-body">
         The privacy for
-        <span class="group"
+        <span class="group" i18n:name="groupName"
               tal:content="view/groupInfo/name">this group</span>
         cannot be changed because it is a
         <em class="wordasword">support group:</em> anyone can post

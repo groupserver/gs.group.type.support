@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-10-14 23:03+0000\n"
-"PO-Revision-Date: 2014-10-14 16:16-0700\n"
+"POT-Creation-Date: 2015-03-12 19:02+0000\n"
+"PO-Revision-Date: 2015-03-12 12:04-0700\n"
 "Last-Translator: Michael JasonSmith <mpj17@onlinegroups.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -14,22 +14,23 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./set.py:50
-msgid "Support group"
-msgstr "Support group"
-
 #. Default: "Change privacy"
 #: ./browser/templates/changeprivacy.pt:9
 msgid "change-privacy"
 msgstr "Change privacy"
 
-#. Default: "The privacy for <span class=\"group\">${DYNAMIC_CONTENT}</span> cannot be changed because it is a <em class=\"wordasword\">support group:</em> anyone can post to the group, but only the members can view it."
+#. Default: "The privacy for ${groupName} cannot be changed because it is a <em class=\"wordasword\">support group:</em> anyone can post to the group, but only the members can view it."
 #: ./browser/templates/changeprivacy.pt:39
 msgid "change-privacy-body"
-msgstr "The privacy for <span class=\"group\">${DYNAMIC_CONTENT}</span> cannot be changed because it is a <em class=\"wordasword\">support group:</em> anyone can post to the group, but only the members can view it."
+msgstr "The privacy for ${groupName} cannot be changed because it is a <em class=\"wordasword\">support group:</em> anyone can post to the group, but only the members can view it."
 
 #. Default: "Support group: non-members can post, but only members can see the group"
 #: ./set.py:24
-msgid "set-name"
+msgid "set-name-help"
 msgstr "Support group: non-members can post, but only members can see the group"
+
+#. Default: "Support group"
+#: ./set.py:50
+msgid "support-group-name"
+msgstr "Support group"
 

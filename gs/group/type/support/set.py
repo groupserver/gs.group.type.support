@@ -21,7 +21,7 @@ from . import GSMessageFactory as _
 
 class SetSupportGroup(SetABC):
     'Set a group folder to be a support group'
-    name = _('set-name',
+    name = _('set-name-help',
              'Support group: non-members can post, but only members can '
              'see the group')
     weight = 30
@@ -47,7 +47,7 @@ class SetSupportGroup(SetABC):
 
 
 class UnsetSupportGroup(UnsetABC):
-    name = _('Support group')
+    name = _('support-group-name', 'Support group')
     setTypeId = 'gs-group-type-support-set'
 
     def unset(self):
