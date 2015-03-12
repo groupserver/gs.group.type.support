@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[gs-group-type-support.gs-group-type-support-pot]
+file_filter = gs/group/type/support/locales/<lang>/LC_MESSAGES/gs.group.type.support.po
+source_lang = en
+type = PO
+
