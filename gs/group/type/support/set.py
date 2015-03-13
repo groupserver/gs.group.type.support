@@ -14,6 +14,7 @@
 ############################################################################
 from __future__ import absolute_import, unicode_literals
 from zope.component import createObject
+from zope.i18n import translate
 from gs.group.type.set import (SetABC, UnsetABC)
 from gs.group.privacy.interfaces import IGSChangePrivacy
 from . import GSMessageFactory as _
@@ -47,7 +48,7 @@ class SetSupportGroup(SetABC):
 
 
 class UnsetSupportGroup(UnsetABC):
-    name = _('support-group-name', 'Support group')
+    i18nName = _('support-group-name', 'Support group')
     setTypeId = 'gs-group-type-support-set'
 
     def unset(self):
@@ -58,3 +59,7 @@ class UnsetSupportGroup(UnsetABC):
     def unset_marker(self):
         iFaces = ['gs.group.type.support.interfaces.IGSSupportGroup']
         self.del_marker(self.group, iFaces)
+
+    @property
+    def name(self):
+        return translate(self.i18nName)
